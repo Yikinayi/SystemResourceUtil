@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="yzx.util.sys.res.lib">
+
+
+    <application>
+
+        <activity
+            android:name=".SystemResourceHolderActivity"
+            android:configChanges="screenLayout|screenSize|keyboard|keyboardHidden|layoutDirection|orientation|locale|navigation"
+            android:screenOrientation="behind"
+            android:stateNotNeeded="true" />
+
+    </application>
+
+</manifest>
