@@ -9,7 +9,8 @@
             android:name=".SystemResourceHolderActivity"
             android:configChanges="screenLayout|screenSize|keyboard|keyboardHidden|layoutDirection|orientation|locale|navigation"
             android:screenOrientation="behind"
-            android:stateNotNeeded="true" />
+            android:stateNotNeeded="true"
+            android:theme="@style/SystemResourceHolderActivity" />
 
     </application>
 
