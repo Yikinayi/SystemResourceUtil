@@ -23,9 +23,16 @@ internal class SystemResourceHolderActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         dispatchCallback(object : CallbackDispatcher {
+
             override fun onNone() = finish()
-            override fun onSystemImage(cb: SelectSystemImagesCallback) = requestSystemImages(this@SystemResourceHolderActivity)
+
+            override fun onSystemImage(cb: SelectSystemImagesCallback) {
+                kotlin.runCatching { requestSystemImages(this@SystemResourceHolderActivity) }
+                    .onFailure { finish(); cb.onResult(null) }
+            }
+
         }, mCallback)
     }
 
